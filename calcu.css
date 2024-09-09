@@ -1,0 +1,108 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+.calculator {
+   background: white;
+   width: 400px;
+   border-radius: 12px;
+   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.calculator-display {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1{
+  margin: 0;
+  font-size: 45px;
+  padding: 25px;
+  font-weight: 800;
+  overflow-x: auto;
+}
+
+.calculator-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  font-size: 40px;
+  font-weight: 800;
+  gap: 10px;
+  padding: 10px;
+}
+
+.equal {
+    grid-column-start: 4;
+    grid-row: 2/span 3;
+}
+
+.delete {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: orange;
+    color: white;
+}
+
+button {
+    min-height: 50px;
+    transition: 0.1s;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+}
+
+button:hover {
+    filter: brightness(85%);
+}
+
+button:active {
+    transform: translateY(-5px);
+}
+
+.operator , .equal{
+    background-color: orange;
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+}
+
+.clear-btn {
+    background-color: orange;
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.decimal {
+    grid-column: 1 / span 2;
+}
+
+#zero {
+    grid-column: 3 / span 2;
+}
+
+@media screen and (max-width:600px) {
+    .calculator {
+        width: 95%;
+    }
+}
